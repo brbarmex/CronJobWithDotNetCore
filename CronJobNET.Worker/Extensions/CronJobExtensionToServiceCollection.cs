@@ -7,8 +7,8 @@ namespace CronJobNET.Worker.Extensions
     {
         public static void AddJobs(this IServiceCollection services)
         {
-            services.AddHostedService<NotificationJob>(_ => new NotificationJob("*/1 * * * *", System.TimeZoneInfo.Local));
-            services.AddHostedService<PurgerLogsJob>(_ => new PurgerLogsJob("*/2 * * * *", System.TimeZoneInfo.Local));
+            services.AddHostedService<NotificationJob>(_ => new NotificationJob(60000));
+            services.AddHostedService<PurgerLogsJob>(_ => new PurgerLogsJob(120000));
         }
     }
 }

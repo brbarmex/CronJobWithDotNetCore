@@ -7,7 +7,7 @@ namespace CronJobNET.Worker.Jobs
 {
     public class PurgerLogsJob : BackgroundService
     {
-        public PurgerLogsJob(string cronExpression, TimeZoneInfo timeZoneInfo) : base(cronExpression, timeZoneInfo)
+        public PurgerLogsJob(double timeInMiliseconds) : base(timeInMiliseconds)
         {
         }
 

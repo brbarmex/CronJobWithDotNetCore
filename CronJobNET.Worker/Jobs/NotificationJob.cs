@@ -7,7 +7,7 @@ namespace CronJobNET.Worker.Jobs
 {
     public class NotificationJob : BackgroundService
     {
-        public NotificationJob(string cronExpression, TimeZoneInfo timeZoneInfo) : base(cronExpression, timeZoneInfo)
+        public NotificationJob(double timeInMiliseconds) : base(timeInMiliseconds)
         {
         }
 
